@@ -7,8 +7,12 @@
 
 import UIKit
 
+
+
 class HorizontalViewCell: UICollectionViewCell {
 
+    @IBOutlet private weak var collection: UICollectionView!
+    @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var movieImage: UIImageView!
     override func awakeFromNib() {

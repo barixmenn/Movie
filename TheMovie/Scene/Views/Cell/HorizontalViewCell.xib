@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="85" height="120"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venom Let There Be Carnage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-qq-ClA">
-                        <rect key="frame" x="97" y="0.0" width="218" height="17"/>
+                        <rect key="frame" x="97" y="0.0" width="218" height="16"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-Dl-WiK">
-                        <rect key="frame" x="97" y="25" width="16" height="16"/>
+                        <rect key="frame" x="97" y="24" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="O2D-oL-QM5"/>
                             <constraint firstAttribute="width" constant="16" id="fzz-BJ-G9f"/>
@@ -40,28 +40,46 @@
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-XG-eda">
+                        <rect key="frame" x="97" y="47" width="218" height="26"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K3h-gf-QYK">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Bi7-Dl-WiK" firstAttribute="top" secondItem="ifQ-qq-ClA" secondAttribute="bottom" constant="8" id="3Jf-TG-C2J"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.259939" id="7de-9p-ypk"/>
+                <constraint firstItem="LCh-XG-eda" firstAttribute="leading" secondItem="ifQ-qq-ClA" secondAttribute="leading" id="8oL-cx-Bis"/>
+                <constraint firstAttribute="bottom" secondItem="LCh-XG-eda" secondAttribute="bottom" constant="47" id="AVm-jh-8aZ"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AfY-8B-gpr"/>
+                <constraint firstItem="LCh-XG-eda" firstAttribute="top" secondItem="S5M-lz-J0q" secondAttribute="bottom" constant="4" id="JEe-yq-vbt"/>
                 <constraint firstItem="S5M-lz-J0q" firstAttribute="top" secondItem="ifQ-qq-ClA" secondAttribute="bottom" constant="6" id="NF1-zv-lqo"/>
                 <constraint firstAttribute="bottom" secondItem="O6W-zh-dpt" secondAttribute="bottom" id="NzM-uM-EBb"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OlK-jm-4Io"/>
+                <constraint firstItem="LCh-XG-eda" firstAttribute="trailing" secondItem="ifQ-qq-ClA" secondAttribute="trailing" id="WYf-IP-SMS"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="leading" secondItem="O6W-zh-dpt" secondAttribute="trailing" constant="12" id="We7-Mx-Trz"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="top" secondItem="O6W-zh-dpt" secondAttribute="top" id="Yu9-Ka-loa"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="leading" secondItem="Bi7-Dl-WiK" secondAttribute="trailing" constant="-16" id="aoy-xd-gLC"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bTG-SA-USB"/>
+                <constraint firstItem="LCh-XG-eda" firstAttribute="top" secondItem="Bi7-Dl-WiK" secondAttribute="bottom" constant="7" id="fGB-mt-th5"/>
                 <constraint firstItem="S5M-lz-J0q" firstAttribute="trailing" secondItem="ifQ-qq-ClA" secondAttribute="trailing" id="fSC-fn-GP5"/>
                 <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="ifQ-qq-ClA" secondAttribute="leading" id="icR-68-kUq"/>
                 <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="ifQ-qq-ClA" secondAttribute="leading" id="jsQ-qd-RDy"/>
                 <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="O6W-zh-dpt" secondAttribute="trailing" constant="12" id="mqr-Fs-J0R"/>
                 <constraint firstAttribute="trailing" secondItem="ifQ-qq-ClA" secondAttribute="trailing" constant="12" id="wQe-oO-qBb"/>
+                <constraint firstItem="LCh-XG-eda" firstAttribute="centerY" secondItem="O6W-zh-dpt" secondAttribute="centerY" id="yca-dT-947"/>
             </constraints>
             <connections>
+                <outlet property="collection" destination="LCh-XG-eda" id="9TO-0J-RgK"/>
                 <outlet property="movieImage" destination="O6W-zh-dpt" id="Vc1-gt-fWA"/>
+                <outlet property="ratingLabel" destination="S5M-lz-J0q" id="Rp0-Cs-8K5"/>
                 <outlet property="titleLabel" destination="ifQ-qq-ClA" id="Ra8-Ru-cyc"/>
             </connections>
             <point key="canvasLocation" x="58.778625954198468" y="6.3380281690140849"/>
@@ -71,6 +89,9 @@
         <image name="star" width="12" height="11"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
