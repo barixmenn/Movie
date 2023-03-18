@@ -13,3 +13,12 @@ enum ErrorTypes : String, Error {
     case generalError = "General Error"
 }
 
+final class NetworkHelper {
+    static let shared = NetworkHelper()
+    private let BASE_URL = "https://api.themoviedb.org/3/discover/movie?"
+    private let  API_KEY = "api_key=ca45edd144675ad0b1560f0d52f4517c"
+    
+    func requestUrl(url: String) -> String {
+        BASE_URL + url + "?api_key=\(API_KEY)"
+    }
+}
