@@ -19,9 +19,10 @@
 		605D844429C5130500628230 /* HorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D844229C5130500628230 /* HorizontalViewCell.swift */; };
 		605D844529C5130500628230 /* HorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605D844329C5130500628230 /* HorizontalViewCell.xib */; };
 		605D844729C5242600628230 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D844629C5242600628230 /* NetworkHelper.swift */; };
-		605D844A29C5248200628230 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D844929C5248200628230 /* Constant.swift */; };
 		605D844C29C5258000628230 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D844B29C5258000628230 /* NetworkManager.swift */; };
 		605D844F29C525B900628230 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 605D844E29C525B900628230 /* Alamofire */; };
+		60C4B1F529C601F900E9BC6F /* HomeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1F429C601F900E9BC6F /* HomeHelper.swift */; };
+		60C4B1F729C602DF00E9BC6F /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1F629C602DF00E9BC6F /* HomeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +40,9 @@
 		605D844229C5130500628230 /* HorizontalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewCell.swift; sourceTree = "<group>"; };
 		605D844329C5130500628230 /* HorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalViewCell.xib; sourceTree = "<group>"; };
 		605D844629C5242600628230 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		605D844929C5248200628230 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		605D844B29C5258000628230 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		60C4B1F429C601F900E9BC6F /* HomeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHelper.swift; sourceTree = "<group>"; };
+		60C4B1F629C602DF00E9BC6F /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,6 @@
 		605D841A29C5081900628230 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
-				605D844829C5247A00628230 /* Constant */,
 				605D843429C50D2900628230 /* Scene */,
 				605D843329C50D2300628230 /* Helper */,
 				605D843029C50D0500628230 /* Network */,
@@ -118,6 +119,8 @@
 		605D843229C50D1700628230 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				60C4B1F429C601F900E9BC6F /* HomeHelper.swift */,
+				60C4B1F629C602DF00E9BC6F /* HomeManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -179,14 +182,6 @@
 				605D844329C5130500628230 /* HorizontalViewCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		605D844829C5247A00628230 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				605D844929C5248200628230 /* Constant.swift */,
-			);
-			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C4B1F729C602DF00E9BC6F /* HomeManager.swift in Sources */,
 				605D844729C5242600628230 /* NetworkHelper.swift in Sources */,
 				605D843B29C50DB900628230 /* FavoriteController.swift in Sources */,
 				605D844C29C5258000628230 /* NetworkManager.swift in Sources */,
-				605D844A29C5248200628230 /* Constant.swift in Sources */,
 				605D843D29C50DC500628230 /* SearchController.swift in Sources */,
+				60C4B1F529C601F900E9BC6F /* HomeHelper.swift in Sources */,
 				605D844429C5130500628230 /* HorizontalViewCell.swift in Sources */,
 				605D842029C5081900628230 /* ViewController.swift in Sources */,
 				605D841C29C5081900628230 /* AppDelegate.swift in Sources */,
