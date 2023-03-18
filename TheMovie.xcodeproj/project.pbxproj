@@ -23,6 +23,8 @@
 		605D844F29C525B900628230 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 605D844E29C525B900628230 /* Alamofire */; };
 		60C4B1F529C601F900E9BC6F /* HomeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1F429C601F900E9BC6F /* HomeHelper.swift */; };
 		60C4B1F729C602DF00E9BC6F /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1F629C602DF00E9BC6F /* HomeManager.swift */; };
+		60C4B1FA29C6083D00E9BC6F /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1F929C6083D00E9BC6F /* MovieModel.swift */; };
+		60C4B1FD29C609FF00E9BC6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B1FC29C609FF00E9BC6F /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		605D844B29C5258000628230 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		60C4B1F429C601F900E9BC6F /* HomeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHelper.swift; sourceTree = "<group>"; };
 		60C4B1F629C602DF00E9BC6F /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		60C4B1F929C6083D00E9BC6F /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		60C4B1FC29C609FF00E9BC6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +80,10 @@
 		605D841A29C5081900628230 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
+				60C4B1FE29C6191900E9BC6F /* App */,
 				605D843429C50D2900628230 /* Scene */,
 				605D843329C50D2300628230 /* Helper */,
 				605D843029C50D0500628230 /* Network */,
-				605D842F29C50CFD00628230 /* coordinator */,
-				605D841B29C5081900628230 /* AppDelegate.swift */,
-				605D841D29C5081900628230 /* SceneDelegate.swift */,
 				605D841F29C5081900628230 /* ViewController.swift */,
 				605D842129C5081900628230 /* Main.storyboard */,
 				605D842429C5081A00628230 /* Assets.xcassets */,
@@ -89,13 +91,6 @@
 				605D842929C5081A00628230 /* Info.plist */,
 			);
 			path = TheMovie;
-			sourceTree = "<group>";
-		};
-		605D842F29C50CFD00628230 /* coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = coordinator;
 			sourceTree = "<group>";
 		};
 		605D843029C50D0500628230 /* Network */ = {
@@ -146,6 +141,8 @@
 		605D843529C50D3100628230 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				60C4B1FB29C609F700E9BC6F /* ViewModel */,
+				60C4B1F829C6083500E9BC6F /* Model */,
 				605D843829C50DAF00628230 /* HomeController.swift */,
 			);
 			path = Home;
@@ -182,6 +179,31 @@
 				605D844329C5130500628230 /* HorizontalViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		60C4B1F829C6083500E9BC6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60C4B1F929C6083D00E9BC6F /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60C4B1FB29C609F700E9BC6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60C4B1FC29C609FF00E9BC6F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60C4B1FE29C6191900E9BC6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				605D841B29C5081900628230 /* AppDelegate.swift */,
+				605D841D29C5081900628230 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C4B1FA29C6083D00E9BC6F /* MovieModel.swift in Sources */,
 				60C4B1F729C602DF00E9BC6F /* HomeManager.swift in Sources */,
 				605D844729C5242600628230 /* NetworkHelper.swift in Sources */,
 				605D843B29C50DB900628230 /* FavoriteController.swift in Sources */,
@@ -269,6 +292,7 @@
 				605D843D29C50DC500628230 /* SearchController.swift in Sources */,
 				60C4B1F529C601F900E9BC6F /* HomeHelper.swift in Sources */,
 				605D844429C5130500628230 /* HorizontalViewCell.swift in Sources */,
+				60C4B1FD29C609FF00E9BC6F /* HomeViewModel.swift in Sources */,
 				605D842029C5081900628230 /* ViewController.swift in Sources */,
 				605D841C29C5081900628230 /* AppDelegate.swift in Sources */,
 				605D841E29C5081900628230 /* SceneDelegate.swift in Sources */,

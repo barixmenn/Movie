@@ -8,31 +8,26 @@
 import Foundation
 import Alamofire
 
-final class NetworkManager {
+class NetworkManager {
     static let shared = NetworkManager()
-}
-
-extension NetworkManager {
-    func request<T:Codable>(type: T.Type, url: String, method: HTTPMethod, completion: @escaping((Result<T,ErrorTypes>) -> ())) {
-        AF.request(url,method: method).responseData { response in
+    
+    func request<T: Codable>(type: T.Type,
+                             url: String,
+                             method: HTTPMethod,
+                             completion: @escaping((Result<T, ErrorTypes>)->())) {
+        AF.request(url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "", method: method).responseData { response in
             switch response.result {
             case .success(let data):
                 self.handleResponse(data: data) { response in
                     completion(response)
                 }
-                
-            case .failure(_):
+            case .failure(let _):
                 completion(.failure(.generalError))
-                
             }
         }
     }
-}
-
-
-extension NetworkManager {
-    fileprivate func handleResponse<T: Codable>(data: Data, completion: @escaping((Result<T, ErrorTypes>) -> ())) {
-        
+    
+    fileprivate func handleResponse<T: Codable>(data: Data, completion: @escaping((Result<T, ErrorTypes>)->())) {
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
             completion(.success(result))

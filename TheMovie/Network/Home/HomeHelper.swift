@@ -8,7 +8,7 @@
 import Foundation
 
 enum HomeEndpoint : String {
-    case popular =  "popular"
+    case popular = "movie/popular"
     
     var path : String {
         switch self {

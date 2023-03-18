@@ -12,20 +12,45 @@ final class HomeController : UIViewController {
     //MARK: - UI Elements
     @IBOutlet weak var collection: UICollectionView!
     //MARK: - Properties
+    let viewModel = HomeViewModel()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionSetup()
+        configure()
         
     }
     
     //MARK: - Functions
     
+    fileprivate func configure() {
+        viewModelConfiguration()
+        collectionSetup()
+
+    }
+    
     //MARK: - Actions
 
 }
 
+//MARK: - Get Data
+extension HomeController {
+    fileprivate func viewModelConfiguration() {
+        viewModel.getCategoryItems()
+        viewModel.errorCallback = { [weak self] errorMessage in
+          print("Error:\(errorMessage)")
+        }
+        
+        viewModel.successCallback = { [weak self] in
+            DispatchQueue.main.async {
+                self?.collection.reloadData()
+            }
+        }
+    }
+}
+
+
+//MARK: - CollectionView Extensions
 extension HomeController {
     fileprivate func collectionSetup() {
         collection.register(UINib(nibName: "\(HorizontalViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -36,7 +61,7 @@ extension HomeController {
 extension HomeController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        viewModel.movie?.results?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

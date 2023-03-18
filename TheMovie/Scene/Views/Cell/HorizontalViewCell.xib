@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,24 +27,50 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-Dl-WiK">
+                        <rect key="frame" x="97" y="25" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="O2D-oL-QM5"/>
+                            <constraint firstAttribute="width" constant="16" id="fzz-BJ-G9f"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6.4/10 IMDb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5M-lz-J0q">
+                        <rect key="frame" x="121" y="23" width="194" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="Bi7-Dl-WiK" firstAttribute="top" secondItem="ifQ-qq-ClA" secondAttribute="bottom" constant="8" id="3Jf-TG-C2J"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.259939" id="7de-9p-ypk"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AfY-8B-gpr"/>
+                <constraint firstItem="S5M-lz-J0q" firstAttribute="top" secondItem="ifQ-qq-ClA" secondAttribute="bottom" constant="6" id="NF1-zv-lqo"/>
                 <constraint firstAttribute="bottom" secondItem="O6W-zh-dpt" secondAttribute="bottom" id="NzM-uM-EBb"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OlK-jm-4Io"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="leading" secondItem="O6W-zh-dpt" secondAttribute="trailing" constant="12" id="We7-Mx-Trz"/>
                 <constraint firstItem="ifQ-qq-ClA" firstAttribute="top" secondItem="O6W-zh-dpt" secondAttribute="top" id="Yu9-Ka-loa"/>
+                <constraint firstItem="ifQ-qq-ClA" firstAttribute="leading" secondItem="Bi7-Dl-WiK" secondAttribute="trailing" constant="-16" id="aoy-xd-gLC"/>
                 <constraint firstItem="O6W-zh-dpt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bTG-SA-USB"/>
+                <constraint firstItem="S5M-lz-J0q" firstAttribute="trailing" secondItem="ifQ-qq-ClA" secondAttribute="trailing" id="fSC-fn-GP5"/>
+                <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="ifQ-qq-ClA" secondAttribute="leading" id="icR-68-kUq"/>
+                <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="ifQ-qq-ClA" secondAttribute="leading" id="jsQ-qd-RDy"/>
+                <constraint firstItem="Bi7-Dl-WiK" firstAttribute="leading" secondItem="O6W-zh-dpt" secondAttribute="trailing" constant="12" id="mqr-Fs-J0R"/>
                 <constraint firstAttribute="trailing" secondItem="ifQ-qq-ClA" secondAttribute="trailing" constant="12" id="wQe-oO-qBb"/>
             </constraints>
             <connections>
                 <outlet property="movieImage" destination="O6W-zh-dpt" id="Vc1-gt-fWA"/>
                 <outlet property="titleLabel" destination="ifQ-qq-ClA" id="Ra8-Ru-cyc"/>
             </connections>
-            <point key="canvasLocation" x="67" y="-11"/>
+            <point key="canvasLocation" x="58.778625954198468" y="6.3380281690140849"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="star" width="12" height="11"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
