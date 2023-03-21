@@ -5,6 +5,9 @@
 //  Created by Baris on 18.03.2023.
 //
 
+import Foundation
+import SDWebImage
+
 // MARK: - Movie
 struct Movie: Codable {
     let page: Int?
@@ -19,7 +22,7 @@ struct Movie: Codable {
 }
 
 // MARK: - MovieResult
-struct MovieResult: Codable {
+struct MovieResult: Codable, MovieCellProtocol {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
@@ -34,7 +37,10 @@ struct MovieResult: Codable {
     let order: Int?
     let department, job: String?
     
-   
+    var posterImage: String {
+        "https://image.tmdb.org/t/p/original/\(posterPath ?? "")"
+    }
+    
     var titleText: String {
         title ?? ""
     }
@@ -45,8 +51,8 @@ struct MovieResult: Codable {
         }
         return ""
     }
-    
   
+    
     var overViewText: String {
         overview ?? ""
     }

@@ -65,8 +65,10 @@ extension HomeController : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HorizontalViewCell
+        if let movie = viewModel.movie?.results?[indexPath.item] {
+            cell.configure(data: movie)
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
