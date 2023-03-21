@@ -15,7 +15,7 @@ protocol MovieCellProtocol {
     
 }
 
-class HorizontalViewCell: UICollectionViewCell {
+class HorizontalViewCell: UICollectionViewCell,ReuseProtocol,NibProtocol {
 
     @IBOutlet private weak var collection: UICollectionView!
     @IBOutlet private weak var ratingLabel: UILabel!

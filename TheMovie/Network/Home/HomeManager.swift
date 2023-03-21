@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeManagerProtocol {
     func getCategoryMovies(complete: @escaping((Movie?,Error?) -> ()))
+    func getGenres(complete: @escaping(([GenreElement]?,Error?) -> ()))
 }
 
 final class HomeManager : HomeManagerProtocol {
@@ -27,4 +28,18 @@ extension HomeManager {
             }
         }
     }
+    
+    //genre
+    func getGenres(complete: @escaping (([GenreElement]?, Error?) -> ())) {
+           NetworkManager.shared.request(type: Genre.self,
+                                         url: HomeEndpoint.genre.path,
+                                         method: .get) { response in
+               switch response {
+               case .success(let data):
+                   complete(data.genres, nil)
+               case .failure(let error):
+                   complete(nil, error)
+               }
+           }
+       }
 }
