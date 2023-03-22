@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,24 +17,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IVP-5s-9ox">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IVP-5s-9ox">
+                                <rect key="frame" x="0.0" y="71" width="393" height="710"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hNQ-LW-s6V">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="184" height="193"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="v85-He-yvA" customClass="PeopleCell" customModule="TheMovie">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="v85-He-yvA" customClass="PeopleCell" customModule="TheMovie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="193"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ija-Vg-1Na">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wMT-oy-MF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="184" height="193"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1x-7E-G6R">
+                                                    <rect key="frame" x="8" y="8" width="168" height="148"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="168" id="fTH-IZ-9cX"/>
+                                                        <constraint firstAttribute="height" constant="148" id="jm6-yy-LMb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQQ-7U-jWE">
+                                                    <rect key="frame" x="71.333333333333329" y="161" width="41.333333333333329" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rQQ-7U-jWE" firstAttribute="top" secondItem="wMT-oy-MF8" secondAttribute="top" constant="161" id="3qg-f3-Etr"/>
+                                                <constraint firstItem="E1x-7E-G6R" firstAttribute="top" secondItem="wMT-oy-MF8" secondAttribute="topMargin" id="BII-0C-Lig"/>
+                                                <constraint firstItem="rQQ-7U-jWE" firstAttribute="leading" secondItem="wMT-oy-MF8" secondAttribute="leadingMargin" constant="63.333333333333343" id="QVi-hW-Php"/>
+                                                <constraint firstItem="rQQ-7U-jWE" firstAttribute="top" secondItem="E1x-7E-G6R" secondAttribute="bottom" constant="5" id="W2f-nD-68u"/>
+                                                <constraint firstItem="E1x-7E-G6R" firstAttribute="leading" secondItem="wMT-oy-MF8" secondAttribute="leadingMargin" id="ajc-8Z-epf"/>
+                                                <constraint firstItem="rQQ-7U-jWE" firstAttribute="centerX" secondItem="E1x-7E-G6R" secondAttribute="centerX" id="hsT-Y2-Lni"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="150" height="150"/>
+                                        <size key="customSize" width="184" height="193"/>
+                                        <connections>
+                                            <outlet property="peopleImage" destination="E1x-7E-G6R" id="qkG-dB-1zO"/>
+                                            <outlet property="titleLabel" destination="rQQ-7U-jWE" id="LbC-zS-hZ4"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -45,12 +71,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="neh-lm-kOn"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="neh-lm-kOn" firstAttribute="bottom" secondItem="IVP-5s-9ox" secondAttribute="bottom" id="028-nY-8Yj"/>
-                            <constraint firstItem="IVP-5s-9ox" firstAttribute="leading" secondItem="neh-lm-kOn" secondAttribute="leading" id="CaE-QW-baf"/>
-                            <constraint firstItem="neh-lm-kOn" firstAttribute="trailing" secondItem="IVP-5s-9ox" secondAttribute="trailing" id="X20-L2-YqC"/>
-                            <constraint firstItem="IVP-5s-9ox" firstAttribute="top" secondItem="neh-lm-kOn" secondAttribute="top" id="pV9-1T-ROb"/>
+                            <constraint firstItem="IVP-5s-9ox" firstAttribute="bottom" secondItem="neh-lm-kOn" secondAttribute="bottom" id="ScN-1q-w41"/>
+                            <constraint firstItem="IVP-5s-9ox" firstAttribute="leading" secondItem="29h-zi-PCz" secondAttribute="leading" id="bOD-X0-NCz"/>
+                            <constraint firstItem="IVP-5s-9ox" firstAttribute="top" secondItem="neh-lm-kOn" secondAttribute="top" id="rfL-iw-4rz"/>
+                            <constraint firstAttribute="trailing" secondItem="IVP-5s-9ox" secondAttribute="trailing" id="uNc-lA-UJj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabbarItemThree" id="4u7-VC-XLP"/>
@@ -73,7 +99,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-Iq-Ehf">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="Jps-Pp-p6q">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -88,7 +114,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZOG-XW-gZh"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6q4-Iq-Ehf" firstAttribute="trailing" secondItem="ZOG-XW-gZh" secondAttribute="trailing" id="ARM-cE-84S"/>
                             <constraint firstAttribute="bottom" secondItem="6q4-Iq-Ehf" secondAttribute="bottom" id="DDb-42-xR8"/>
@@ -116,7 +142,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A0i-j0-fDI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ySa-Z3-WKf" kind="relationship" relationship="viewControllers" id="grQ-J7-FhX"/>
@@ -131,8 +158,5 @@
     <resources>
         <image name="tabbarItemOne" width="24" height="24"/>
         <image name="tabbarItemThree" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

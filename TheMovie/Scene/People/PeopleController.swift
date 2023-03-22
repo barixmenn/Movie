@@ -24,7 +24,7 @@ final class PeopleController : UIViewController {
     
     //MARK: - Functions
     fileprivate func configure() {
-        setupCollection()
+        //setupCollection()
         getData()
         
     }
@@ -60,11 +60,7 @@ extension PeopleController : UICollectionViewDelegate, UICollectionViewDataSourc
         collection.register(UINib(nibName: "\(PeopleCell.self)", bundle: nil), forCellWithReuseIdentifier: "cell")
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.peopleItems.count
     }
@@ -76,9 +72,12 @@ extension PeopleController : UICollectionViewDelegate, UICollectionViewDataSourc
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
+        let width = collectionView.frame.width / 2 - 10
+        let height = collectionView.frame.height * 270 / 800
+        return CGSize(width: width, height: height)
+        
+        
+        
     }
-    
 }
-
 

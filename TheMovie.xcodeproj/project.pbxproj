@@ -24,6 +24,7 @@
 		6033818629CA423F00F6753D /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6033818429CA423F00F6753D /* TitleCell.xib */; };
 		6033818A29CA429900F6753D /* LabelCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6033818829CA429900F6753D /* LabelCollectionCell.swift */; };
 		6033818B29CA429900F6753D /* LabelCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6033818929CA429900F6753D /* LabelCollectionCell.xib */; };
+		60356DBD29CBAF0200654FC3 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60356DBC29CBAF0200654FC3 /* PeopleCell.swift */; };
 		605D841C29C5081900628230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D841B29C5081900628230 /* AppDelegate.swift */; };
 		605D841E29C5081900628230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D841D29C5081900628230 /* SceneDelegate.swift */; };
 		605D842329C5081900628230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605D842129C5081900628230 /* Main.storyboard */; };
@@ -38,8 +39,6 @@
 		605D844C29C5258000628230 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D844B29C5258000628230 /* NetworkManager.swift */; };
 		605D844F29C525B900628230 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 605D844E29C525B900628230 /* Alamofire */; };
 		607A9DD329CB1A4700A1ECF1 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A9DD229CB1A4700A1ECF1 /* People.swift */; };
-		607A9DD729CB1A9400A1ECF1 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A9DD529CB1A9400A1ECF1 /* PeopleCell.swift */; };
-		607A9DD829CB1A9400A1ECF1 /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607A9DD629CB1A9400A1ECF1 /* PeopleCell.xib */; };
 		607A9DDA29CB1ABE00A1ECF1 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A9DD929CB1ABE00A1ECF1 /* PeopleViewModel.swift */; };
 		607A9DDD29CB1B0200A1ECF1 /* PeopleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A9DDC29CB1B0200A1ECF1 /* PeopleHelper.swift */; };
 		607A9DDF29CB1B0A00A1ECF1 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A9DDE29CB1B0A00A1ECF1 /* PeopleManager.swift */; };
@@ -69,6 +68,7 @@
 		6033818429CA423F00F6753D /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		6033818829CA429900F6753D /* LabelCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionCell.swift; sourceTree = "<group>"; };
 		6033818929CA429900F6753D /* LabelCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionCell.xib; sourceTree = "<group>"; };
+		60356DBC29CBAF0200654FC3 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		605D841829C5081900628230 /* TheMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605D841B29C5081900628230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605D841D29C5081900628230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +84,6 @@
 		605D844629C5242600628230 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		605D844B29C5258000628230 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		607A9DD229CB1A4700A1ECF1 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
-		607A9DD529CB1A9400A1ECF1 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
-		607A9DD629CB1A9400A1ECF1 /* PeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
 		607A9DD929CB1ABE00A1ECF1 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		607A9DDC29CB1B0200A1ECF1 /* PeopleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleHelper.swift; sourceTree = "<group>"; };
 		607A9DDE29CB1B0A00A1ECF1 /* PeopleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
@@ -324,8 +322,7 @@
 		607A9DD429CB1A6B00A1ECF1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				607A9DD529CB1A9400A1ECF1 /* PeopleCell.swift */,
-				607A9DD629CB1A9400A1ECF1 /* PeopleCell.xib */,
+				60356DBC29CBAF0200654FC3 /* PeopleCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6033816529CA24EC00F6753D /* HomeHeaderCell.xib in Resources */,
-				607A9DD829CB1A9400A1ECF1 /* PeopleCell.xib in Resources */,
 				605D844529C5130500628230 /* HorizontalViewCell.xib in Resources */,
 				605D842829C5081A00628230 /* LaunchScreen.storyboard in Resources */,
 				605D842529C5081A00628230 /* Assets.xcassets in Resources */,
@@ -484,7 +480,7 @@
 				605D843929C50DAF00628230 /* HomeController.swift in Sources */,
 				6033815D29CA1DFF00F6753D /* Genre.swift in Sources */,
 				6033817629CA268E00F6753D /* Fonts.swift in Sources */,
-				607A9DD729CB1A9400A1ECF1 /* PeopleCell.swift in Sources */,
+				60356DBD29CBAF0200654FC3 /* PeopleCell.swift in Sources */,
 				6033815F29CA219200F6753D /* GenreHelper.swift in Sources */,
 				6033817C29CA2C1D00F6753D /* HomeCoordinator.swift in Sources */,
 				607A9DDF29CB1B0A00A1ECF1 /* PeopleManager.swift in Sources */,
@@ -641,7 +637,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -671,7 +667,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

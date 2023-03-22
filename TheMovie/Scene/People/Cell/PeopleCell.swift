@@ -1,8 +1,8 @@
 //
-//  PeopleCell.swift
+//  CollectionViewCell.swift
 //  TheMovie
 //
-//  Created by Baris on 22.03.2023.
+//  Created by Baris on 23.03.2023.
 //
 
 import UIKit
