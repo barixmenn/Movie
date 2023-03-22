@@ -8,9 +8,14 @@
 import Foundation
 import Alamofire
 
-class NetworkManager {
+final class NetworkManager {
     static let shared = NetworkManager()
-    
+}
+
+
+extension NetworkManager {
+ 
+    // request
     func request<T: Codable>(type: T.Type,
                              url: String,
                              method: HTTPMethod,
@@ -27,6 +32,7 @@ class NetworkManager {
         }
     }
     
+    //response
     fileprivate func handleResponse<T: Codable>(data: Data, completion: @escaping((Result<T, ErrorTypes>)->())) {
         do {
             let result = try JSONDecoder().decode(T.self, from: data)

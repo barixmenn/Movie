@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +49,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.4/10 IMDb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iX-x9-ACw">
                         <rect key="frame" x="120" y="25.333333333333329" width="195" height="14"/>
                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
-                        <color key="textColor" name="TextGray"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wla-Jt-nYT">
@@ -116,8 +115,5 @@
     </objects>
     <resources>
         <image name="star" width="12" height="11"/>
-        <namedColor name="TextGray">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

@@ -45,11 +45,7 @@ extension HomeController {
         viewModel.successCallback = { [weak self] in
             self?.collection.reloadData()
         }
-        viewModel.coordinator?.filterSelection = { [weak self] category in
-            self?.viewModel.movieCategory = category
-            self?.viewModel.movieItems.removeAll()
-            
-        }
+       
     }
 }
 

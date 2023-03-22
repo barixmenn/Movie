@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +49,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.1/10 IMDb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10C-ZB-y5l">
                         <rect key="frame" x="16" y="270" width="119" height="14"/>
                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
-                        <color key="textColor" name="textGray"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -81,8 +80,5 @@
     </objects>
     <resources>
         <image name="star" width="12" height="11"/>
-        <namedColor name="textGray">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
