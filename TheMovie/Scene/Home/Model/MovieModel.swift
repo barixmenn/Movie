@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SDWebImage
 
 // MARK: - Movie
 struct Movie: Codable {
@@ -38,7 +37,7 @@ struct MovieResult: Codable, MovieCellProtocol {
     let department, job: String?
     
     var posterImage: String {
-        "https://image.tmdb.org/t/p/original/\(posterPath ?? "")"
+        NetworkHelper.shared.getImagePath(url: posterPath ?? "")
     }
     
     var titleText: String {
@@ -51,7 +50,10 @@ struct MovieResult: Codable, MovieCellProtocol {
         }
         return ""
     }
-  
+    
+    var genreItems: [String] {
+        GenreHandler.shared.getItemTitles(ids: genreIDS ?? [])
+    }
     
     var overViewText: String {
         overview ?? ""

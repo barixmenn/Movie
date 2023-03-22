@@ -42,4 +42,25 @@ extension HomeManager {
                }
            }
        }
+    
+    
+    func getCategoryMovies(type: MovieCategory, page: Int, complete: @escaping ((Movie?, Error?) -> ())) {
+        var url = ""
+        switch type {
+        case .nowPlaying:
+            url = HomeEndpoint.nowPlaying.path
+        case .popular:
+            url = HomeEndpoint.popular.path
+        }
+        NetworkManager.shared.request(type: Movie.self,
+                                      url: url + "&page=\(page)",
+                                      method: .get) { response in
+            switch response {
+            case .success(let data):
+                complete(data, nil)
+            case .failure(let error):
+                complete(nil, error)
+            }
+        }
+    }
 }

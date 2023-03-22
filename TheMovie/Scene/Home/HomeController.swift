@@ -36,15 +36,19 @@ final class HomeController : UIViewController {
 //MARK: - Get Data
 extension HomeController {
     fileprivate func viewModelConfiguration() {
-        viewModel.getCategoryItems()
+        viewModel.coordinator = HomeCoordinator(navigationController: navigationController ?? UINavigationController())
+        viewModel.getGenreItems()
+        viewModel.getNowPlaying()
         viewModel.errorCallback = { [weak self] errorMessage in
-          print("Error:\(errorMessage)")
+            print("error: \(errorMessage)")
         }
-        
         viewModel.successCallback = { [weak self] in
-            DispatchQueue.main.async {
-                self?.collection.reloadData()
-            }
+            self?.collection.reloadData()
+        }
+        viewModel.coordinator?.filterSelection = { [weak self] category in
+            self?.viewModel.movieCategory = category
+            self?.viewModel.movieItems.removeAll()
+            
         }
     }
 }
@@ -54,6 +58,7 @@ extension HomeController {
 extension HomeController {
     fileprivate func collectionSetup() {
         collection.register(UINib(nibName: "\(HorizontalViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collection.registerSupplementaryView(type: HomeHeaderCell.self, ofKind: UICollectionView.elementKindSectionHeader)
     }
 }
 
@@ -68,15 +73,22 @@ extension HomeController : UICollectionViewDelegate, UICollectionViewDataSource,
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HorizontalViewCell
         if let movie = viewModel.movie?.results?[indexPath.item] {
             cell.configure(data: movie)
+            
         }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 120)
+        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 130)
-
+        CGSize(width: collectionView.frame.width, height: 365)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header: HomeHeaderCell = collectionView.dequeueSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+        header.configure(data: viewModel.nowPlayingItems)
+        return header
     }
     
 }

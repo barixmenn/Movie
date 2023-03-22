@@ -11,17 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qvo-FQ-Ah0" customClass="HomeHeader" customModule="MovieApp" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qvo-FQ-Ah0" customClass="HomeHeaderCell" customModule="TheMovie" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pR6-Qs-02X" userLabel="ViewTop">
                     <rect key="frame" x="23" y="15" width="329" height="20"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNu-a1-uO3" userLabel="ViewBottom">
                     <rect key="frame" x="23" y="380" width="329" height="20"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eh9-Dp-dhM">
                     <rect key="frame" x="0.0" y="75" width="375" height="289"/>
@@ -55,9 +53,9 @@
                 <constraint firstItem="TNu-a1-uO3" firstAttribute="height" secondItem="pR6-Qs-02X" secondAttribute="height" id="z6M-dt-GC0"/>
             </constraints>
             <connections>
-                <outlet property="collection" destination="eh9-Dp-dhM" id="1pK-RI-85W"/>
-                <outlet property="topView" destination="pR6-Qs-02X" id="P3J-UP-Wr3"/>
-                <outlet property="viewBottom" destination="TNu-a1-uO3" id="Kgf-fu-X1x"/>
+                <outlet property="collection" destination="eh9-Dp-dhM" id="v5R-0q-weq"/>
+                <outlet property="topView" destination="pR6-Qs-02X" id="CwQ-B7-mRm"/>
+                <outlet property="viewBottom" destination="TNu-a1-uO3" id="bX5-PB-IWF"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="153.34821428571428"/>
         </collectionReusableView>

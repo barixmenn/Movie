@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Search Controller-->
         <scene sceneID="edh-bF-f4f">
             <objects>
                 <viewController id="nju-LY-Gca" customClass="SearchController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="neh-lm-kOn"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="8De-Ki-89b"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabbarItemThree" id="8De-Ki-89b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZd-49-WRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,8 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-Iq-Ehf">
-                                <rect key="frame" x="0.0" y="357" width="393" height="509"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-Iq-Ehf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="Jps-Pp-p6q">
                                     <size key="itemSize" width="128" height="128"/>
@@ -50,17 +50,20 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZOG-XW-gZh"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6q4-Iq-Ehf" firstAttribute="trailing" secondItem="ZOG-XW-gZh" secondAttribute="trailing" id="ARM-cE-84S"/>
+                            <constraint firstAttribute="bottom" secondItem="6q4-Iq-Ehf" secondAttribute="bottom" id="DDb-42-xR8"/>
                             <constraint firstItem="ZOG-XW-gZh" firstAttribute="trailing" secondItem="6q4-Iq-Ehf" secondAttribute="trailing" id="GYK-7W-8dz"/>
-                            <constraint firstItem="6q4-Iq-Ehf" firstAttribute="top" secondItem="ZOG-XW-gZh" secondAttribute="top" constant="240" id="Oro-hv-wK3"/>
                             <constraint firstItem="6q4-Iq-Ehf" firstAttribute="leading" secondItem="ZOG-XW-gZh" secondAttribute="leading" id="Otc-8u-Nfl"/>
+                            <constraint firstItem="6q4-Iq-Ehf" firstAttribute="top" secondItem="ZOG-XW-gZh" secondAttribute="top" id="arZ-40-xgx"/>
+                            <constraint firstItem="6q4-Iq-Ehf" firstAttribute="leading" secondItem="ZOG-XW-gZh" secondAttribute="leading" id="fpt-T8-NdT"/>
                             <constraint firstItem="ZOG-XW-gZh" firstAttribute="bottom" secondItem="6q4-Iq-Ehf" secondAttribute="bottom" constant="-83" id="nJq-lj-t5h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie" id="wbd-hd-lMd"/>
                     <connections>
-                        <outlet property="collection" destination="6q4-Iq-Ehf" id="VAE-MT-xan"/>
+                        <outlet property="collection" destination="6q4-Iq-Ehf" id="Mcs-9P-TU9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayO-JF-Jsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="45" y="-745"/>
         </scene>
-        <!--Item 2-->
+        <!--Favorite Controller-->
         <scene sceneID="Dod-fM-tEK">
             <objects>
                 <viewController id="YKa-oU-zmG" customClass="FavoriteController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,17 +99,17 @@
                         <viewLayoutGuide key="safeArea" id="Dpt-Jj-58v"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3Ls-9g-Iin"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabbarItemFour" id="3Ls-9g-Iin"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fC3-7a-rii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="914" y="240"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="4Jk-J5-Bzo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qCo-hP-DW2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="uOd-8p-ZIx"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabbarItemOne" id="uOd-8p-ZIx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R52-iF-7cF">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -123,6 +126,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tabbarItemFour" width="24" height="24"/>
+        <image name="tabbarItemOne" width="24" height="24"/>
+        <image name="tabbarItemThree" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -131,9 +137,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
