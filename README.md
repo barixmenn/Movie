@@ -1,12 +1,5 @@
 
-      
-## Screens
-
-
-
-
-      
-<h1 align=center>Movie</h1> 
+<h1>Movie</h1> 
 
 ## Technologies
 + MVVM Architecture ✅ 
