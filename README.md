@@ -1,5 +1,5 @@
 
-<h1>Movie</h1> 
+<h1>The Movie</h1> 
 
 ## Technologies
 + MVVM Architecture ✅ 
